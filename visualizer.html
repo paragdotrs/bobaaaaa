@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Visualizer - My Music Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .visualizer-box {
+            width: 80%;
+            margin: 20px auto;
+            height: 200px;
+            background-color: #333;
+            border: 3px solid #d63031;
+        }
+        
+        .visualizer-box div {
+            height: 30px;
+            width: 20px;
+            background-color: red;
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        .active {
+            height: 100px !important;
+        }
+    </style>
+</head>
+<body>    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="playlist.html">Playlist</a></li>
+            <li><a href="quiz.html">Music Quiz</a></li>
+            <li><a href="visualizer.html" class="active">Visualizer</a></li>
+            <li><a href="404.html">404</a></li>
+        </ul>
+    </nav>
+
+    <h1>My Music Visualizer</h1>
+    
+    <p>This is my first attempt at making a music visualizer!</p>
+    
+    <div>
+        <h3>Listen to Raat Ki Rani - Seedhe Maut</h3>
+        <audio controls>
+            <source src="Raat_ki_Rani_Shakt.mp3" type="audio/mpeg">
+            Your browser does not support audio
+        </audio>
+    </div>
+    
+    <div class="visualizer-box" id="visualizer-box">
+        <div id="bar1"></div>
+        <div id="bar2"></div>
+        <div id="bar3"></div>
+        <div id="bar4"></div>
+        <div id="bar5"></div>
+    </div>
+    
+    <button onclick="startVisualizer()">Start Visualizer</button>
+    <button onclick="stopVisualizer()">Stop Visualizer</button>
+    
+    <p>Click the buttons to see the visualizer in action!</p>
+      <footer>
+        <p>© 2025 My Music Collection | Created with <span class="heart">❤️</span> by Music Lover</p>
+    </footer>
+
+    <script>
+        function startVisualizer() {
+            document.getElementById("bar1").className = "active";
+            setTimeout(function() {
+                document.getElementById("bar1").className = "";
+                document.getElementById("bar2").className = "active";
+            }, 500);
+            
+            setTimeout(function() {
+                document.getElementById("bar2").className = "";
+                document.getElementById("bar3").className = "active";
+            }, 1000);
+            
+            setTimeout(function() {
+                document.getElementById("bar3").className = "";
+                document.getElementById("bar4").className = "active";
+            }, 1500);
+            
+            setTimeout(function() {
+                document.getElementById("bar4").className = "";
+                document.getElementById("bar5").className = "active";
+            }, 2000);
+            
+            setTimeout(function() {
+                document.getElementById("bar5").className = "";
+            }, 2500);
+        }
+        
+        function stopVisualizer() {
+            document.getElementById("bar1").className = "";
+            document.getElementById("bar2").className = "";
+            document.getElementById("bar3").className = "";
+            document.getElementById("bar4").className = "";
+            document.getElementById("bar5").className = "";
+        }
+    </script>
+</body>
+</html>

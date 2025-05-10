@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.nav-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu li a:hover {
+    background-color: #555;
+}
+
+.nav-menu li a.active {
+    background-color: #d63031;
+}
+
+h1 {
+    font-weight: bold;
+    color: #d63031;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
+}
+
+p {
+    margin: 15px 0;
+}
+
+.song-list {
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.song-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.song-list li:before {
+    content: "🎵";
+    position: absolute;
+    left: 0;
+}
+
+.button {
+    display: inline-block;
+    background-color: #d63031;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #d63031;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Audio player styling */
+.audio-player {
+    margin: 15px 0;
+    width: 100%;
+}
+
+.song-item {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: left;
+    border: 1px solid #d63031;
+}
+
+.song-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 404 page styling */
+.error-message {
+    font-size: 120px;
+    color: #d63031;
+    margin: 0;
+}
+
+.error-text {
+    font-size: 24px;
+    margin: 10px 0 30px 0;
+}
+
+/* Contact form styling */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Quiz page styling */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.quiz-question {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border: 1px solid #d63031;
+}
+
+.quiz-options {
+    margin-top: 10px;
+}
+
+.quiz-option {
+    margin-bottom: 8px;
+}
+
+.quiz-submit {
+    background-color: #d63031;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.quiz-result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    display: none;
+    font-weight: bold;
+}
+
+.heart {
+    color: #e74c3c;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Quiz - My Music Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="playlist.html">Playlist</a></li>
+            <li><a href="quiz.html" class="active">Music Quiz</a></li>
+            <li><a href="visualizer.html">Visualizer</a></li>
+            <li><a href="404.html">404</a></li>
+        </ul>
+    </nav>
+
+    <h1>Test Your Music Knowledge</h1>
+    
+    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Music Quiz">
+    
+    <div class="quiz-container">
+        <div class="quiz-question">
+            <h3>Question 1:</h3>
+            <p>Which artist is known as the "King of Pop"?</p>
+            <div class="quiz-options">
+                <div class="quiz-option">
+                    <input type="radio" id="q1a" name="q1" value="a">
+                    <label for="q1a">Elvis Presley</label>
+                </div>
+                <div class="quiz-option">
+                    <input type="radio" id="q1b" name="q1" value="b">
+                    <label for="q1b">Michael Jackson</label>
+                </div>
+                <div class="quiz-option">
+                    <input type="radio" id="q1c" name="q1" value="c">
+                    <label for="q1c">Justin Timberlake</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-question">
+            <h3>Question 2:</h3>
+            <p>Which of these is NOT an Indian rapper?</p>
+            <div class="quiz-options">
+                <div class="quiz-option">
+                    <input type="radio" id="q2a" name="q2" value="a">
+                    <label for="q2a">Seedhe Maut</label>
+                </div>
+                <div class="quiz-option">
+                    <input type="radio" id="q2b" name="q2" value="b">
+                    <label for="q2b">Drake</label>
+                </div>
+                <div class="quiz-option">
+                    <input type="radio" id="q2c" name="q2" value="c">
+                    <label for="q2c">Krsna</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-question">
+            <h3>Question 3:</h3>
+            <p>Which band performed the hit song "Bohemian Rhapsody"?</p>
+            <div class="quiz-options">
+                <div class="quiz-option">
+                    <input type="radio" id="q3a" name="q3" value="a">
+                    <label for="q3a">The Beatles</label>
+                </div>
+                <div class="quiz-option">
+                    <input type="radio" id="q3b" name="q3" value="b">
+                    <label for="q3b">Queen</label>
+                </div>
+                <div class="quiz-option">
+                    <input type="radio" id="q3c" name="q3" value="c">
+                    <label for="q3c">Led Zeppelin</label>
+                </div>
+            </div>
+        </div>
+
+        <button class="quiz-submit">Check Answers</button>
+        <div id="quiz-result" class="quiz-result"></div>
+    </div>
+      <footer>
+        <p>© 2025 My Music Collection | Created with <span class="heart">❤️</span> by Music Lover</p>
+    </footer>
+
+    <script>
+        const quizSubmit = document.querySelector('.quiz-submit');
+        const quizResult = document.getElementById('quiz-result');
+        
+        quizSubmit.addEventListener('click', function() {
+            let score = 0;
+            
+            if(document.getElementById('q1b').checked) {
+                score++;
+            }
+            
+            if(document.getElementById('q2b').checked) {
+                score++;
+            }
+            
+            if(document.getElementById('q3b').checked) {
+                score++;
+            }
+            
+            quizResult.textContent = `You scored ${score} out of 3!`;
+            quizResult.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
